@@ -216,8 +216,10 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   padding: 72px 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-@media screen and (min-resolution: 2x), (webkit-min-device-pixel-ratio: 2) {
+@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
   .hero {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -226,6 +228,7 @@ button {
 }
 
 .hero-container {
+  width: 100%;
   max-width: 320px;
   margin: 0 auto;
   display: flex;
@@ -245,7 +248,7 @@ button {
 }
 .hero-btn {
   display: block;
-  margin: 48px auto 0;
+  margin: 72px auto 0;
   padding: 16px 32px;
   min-width: 169px;
   font-weight: 500;
@@ -269,13 +272,8 @@ button {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/hero.bg.tab.jpg);
-    padding: 112px 0;
 
-    @media screen and (min-resolution: 2x), (webkit-min-device-pixel-ratio: 2) {
-      background-image:
-        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero.bg.tab2x.jpg);
-    }
+    padding: 112px 0;
   }
   .hero-container {
     max-width: 768px;
@@ -286,13 +284,26 @@ button {
     font-size: 56px;
     line-height: 1.07;
   }
+  .hero-btn {
+    margin: 36px auto 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 2x),
+  (-webkit-min-device-pixel-ratio: 2) {
+  .hero {
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/hero.bg.tab2x.jpg);
+  }
 }
 @media screen and (min-width: 1158px) {
   .hero {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/hero.bg.jpg);
-    @media screen and (min-resolution: 2x), (webkit-min-device-pixel-ratio: 2) {
+    @media screen and (min-resolution: 2x),
+      (-webkit-min-device-pixel-ratio: 2) {
       background-image:
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/hero.bg2x.jpg);
@@ -306,6 +317,17 @@ button {
     max-width: 496px;
     font-size: 56px;
     line-height: 1.07;
+  }
+  .hero-btn {
+    margin: 48px auto 0;
+  }
+}
+@media screen and (min-width: 1158) and (min-resolution: 2x),
+  (-webkit-min-device-pixel-ratio: 2) {
+  .hero {
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/hero.bg2x.jpg);
   }
 }
 /* ---------------------------features-------------------------*/
@@ -324,8 +346,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .features-item {
@@ -900,7 +920,7 @@ button {
   border-radius: 4px;
   transform: translate(-50%, -50%);
 
-  padding: 72px 16px 16px 16px;
+  padding: 72px 16px 24px 16px;
 
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
