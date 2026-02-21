@@ -88,6 +88,10 @@ button {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.contacts {
+  margin-left: auto;
 }
 .nav-list,
 .contacts {
@@ -322,7 +326,7 @@ button {
     margin: 48px auto 0;
   }
 }
-@media screen and (min-width: 1158) and (min-resolution: 2x),
+@media screen and (min-width: 1158px) and (min-resolution: 2x),
   (-webkit-min-device-pixel-ratio: 2) {
   .hero {
     background-image:
